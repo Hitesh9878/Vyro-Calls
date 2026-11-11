@@ -1,0 +1,86 @@
+.add-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.add-contact h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.add-contact-row {
+  display: flex;
+  gap: 8px;
+}
+
+.add-contact-row .btn {
+  flex-shrink: 0;
+}
+
+.add-contact-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+.add-contact-search:focus-within {
+  border-color: var(--accent);
+}
+
+.add-contact-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+}
+
+.add-contact-search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.add-contact-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.add-contact-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+}
+
+.add-contact-who {
+  flex: 1;
+  min-width: 0;
+}
+
+.add-contact-state {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.add-contact-result .btn {
+  flex-shrink: 0;
+  padding: 8px 12px;
+}

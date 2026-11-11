@@ -1,0 +1,145 @@
+.call-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  background: #070a0e;
+}
+
+.call-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+.call-remote-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.call-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.call-info.overlay {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.call-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.call-status {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.call-info.overlay .call-status {
+  color: #dbe3ee;
+}
+
+.call-local-video {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  width: 130px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background: #111;
+  transform: scaleX(-1); /* mirror self view */
+}
+
+.call-controls {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+  background: rgba(15, 20, 25, 0.9);
+}
+
+.call-controls .btn {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.call-controls .btn.active {
+  background: #fff;
+  color: #111;
+}
+
+@media (max-width: 520px) {
+  .call-local-video {
+    width: 96px;
+  }
+}
+
+.call-controls .btn.recording {
+  background: var(--red);
+  color: #fff;
+}
+
+.call-controls .btn.recording svg {
+  animation: rec-blink 1.2s ease-in-out infinite;
+}
+
+.call-rec-banners {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.call-rec-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(15, 20, 25, 0.8);
+  border: 1px solid rgba(239, 79, 79, 0.6);
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.call-rec-pill::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: rec-blink 1.2s ease-in-out infinite;
+}
+
+@keyframes rec-blink {
+  50% {
+    opacity: 0.3;
+  }
+}

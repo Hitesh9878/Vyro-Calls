@@ -1,0 +1,59 @@
+.incoming-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(5, 8, 12, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+.incoming-card {
+  width: 100%;
+  max-width: 340px;
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.incoming-card .avatar-lg {
+  margin: 0 auto 16px;
+  animation: ring-pulse 1.4s ease-out infinite;
+}
+
+.incoming-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.incoming-type {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.incoming-actions {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.incoming-actions .btn {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+@keyframes ring-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 140, 255, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 28px rgba(79, 140, 255, 0);
+  }
+}

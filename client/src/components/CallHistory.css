@@ -1,0 +1,76 @@
+.call-history {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.call-history-empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.call-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.call-row:last-child {
+  border-bottom: none;
+}
+
+.call-row-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.call-row-icon.missed {
+  background: rgba(239, 79, 79, 0.15);
+  color: var(--red);
+}
+
+.call-row-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.call-row-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.call-row-name.missed {
+  color: var(--red);
+}
+
+.call-row-detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.call-row-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.call-row-actions .btn {
+  padding: 8px 10px;
+}
