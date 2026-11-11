@@ -1,13 +1,15 @@
-# Vyro Calls – real-time calling app (MERN + WebRTC)
+# Vyro-Calls
 
-User login → contacts → voice/video calls in real time.
+A real-time voice and video calling application.
 
-- **MongoDB + Express**: users, JWT auth, contacts
-- **React (Vite)**: pages and components, each with its own `.jsx` + `.css`
-- **Socket.IO**: presence (who is online), call signalling, ring timeout and call history events
-- **WebRTC**: the actual audio/video, peer to peer
+## Features
+- Voice calling
+- Video calling
+- Real-time communication
 
-## Run it
+## Tech Stack
+- Frontend
+- Backend
 
 You need Node 18+ and a MongoDB instance (local or Atlas).
 
